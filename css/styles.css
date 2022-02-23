@@ -70,6 +70,8 @@ button:focus,
 button:hover {
   color: var(--secondary-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .container {
@@ -153,23 +155,22 @@ button:hover {
 .contacts-link .item {
   display: contents;
 }
-
+.link {
+  display: flex;
+  align-items: center;
+}
 .contacts-item {
-  width: 16px;
-  height: 16px;
+  margin-right: 10px;
   fill: currentColor;
 }
-.contacts-item:hover,
-.contacts-item:focus {
-  fill: var(--accent-color);
-}
+
 .contacts-link .item:not(:last-child) {
   margin-right: 50px;
 }
 .contacts-link a {
-  display: block;
+  display: flex;
   padding: 32px 30px 32px 9px;
-
+  align-items: center;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -181,6 +182,11 @@ button:hover {
 .contacts-link a:hover,
 .contacts-link a:focus {
   color: var(--accent-color);
+}
+
+.contacts-item:hover,
+.contacts-item:focus {
+  fill: var(--accent-color);
 }
 
 /* Герой */
@@ -252,13 +258,14 @@ button:hover {
 }
 
 .item-icon {
+  display: flex;
+  justify-content: center;
   width: 270px;
   height: 120px;
   margin-bottom: 30px;
 
   background-color: var(--section-color);
   border-radius: 4px;
-  text-align: center;
 }
 
 .feature .item:nth-child(4n) {
@@ -359,12 +366,8 @@ button:hover {
 }
 .social-item {
   display: flex;
-  width: 206px;
-  justify-content: space-between;
   align-items: baseline;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
+  justify-content: center;
 }
 
 .social-link {
@@ -372,6 +375,7 @@ button:hover {
   width: 44px;
   height: 44px;
   padding: 0;
+  margin-right: 10px;
   border: none;
   border-radius: 50%;
   align-items: center;
@@ -409,6 +413,9 @@ button:hover {
 .client-item:focus {
   border: 1px solid var(--accent-color);
 }
+.client-link {
+  display: flex;
+}
 .client-icon {
   width: 106px;
   height: 60px;
@@ -427,7 +434,7 @@ footer {
 }
 .footer .container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 .footer-address {
   margin-right: 70px;
@@ -497,6 +504,7 @@ footer {
 .filters-button:not(:last-child) {
   margin-right: 8px;
 }
+
 .portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -512,8 +520,8 @@ footer {
 .portfolio-card:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
-.portfolio-card:hover,
-.portfolio-card:focus {
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
